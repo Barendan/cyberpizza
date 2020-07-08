@@ -145,6 +145,7 @@ button:focus {
 .banner {
 	background-color: #cc0014 !important;
 	padding: 2rem 0rem 3rem;
+	border: 1px solid white;
 }
 
 .banner-text {
@@ -152,14 +153,17 @@ button:focus {
 	font-size: 14vw;
     font-weight: 600;
     text-transform: uppercase;
-    line-height: 3.3rem;
+    line-height: 4rem;
 }
 
 .banner-sub {
+	background: #00000030;
 	color: white;
     line-height: 1.5rem;
     font-size: 1.2rem;
     padding: 2rem 3rem;
+    margin: 2rem 0rem;
+    border: 1px dashed white;
 }
 
 /*========================================================
@@ -490,6 +494,16 @@ button.close {
 	.splash-text {
 		font-size: 5rem;
 	}
+	.banner-text {
+    	max-width: 360px;
+    	margin: 0 auto;
+	    font-size: 4rem;
+	}
+	.vip-text {
+		max-width: 340px;
+	    margin: 0 auto;
+	    display: block;
+	}
 }
 
 /*// Small devices (landscape phones, 576px and up)*/
@@ -499,6 +513,12 @@ button.close {
 	}
 	.splash-inner {
 		max-width: 400px;
+	}
+	.banner-text {
+		max-width: 470px;
+	}
+	.vip-text {
+		max-width: 450px;
 	}
 
 
@@ -552,6 +572,24 @@ button.close {
 		opacity: 1;
 		transform: scale(1.1);
 	}
+	.banner {
+		padding: 0rem;
+	}
+	.banner-text {
+		font-size: 2.5rem;
+	    line-height: 2.5rem;
+	    padding: 0rem 0.7rem;
+	    max-width: 260px;
+	}
+	.banner-number {
+		font-size: 2rem;
+	}
+	.banner-sub {
+	    line-height: 1.4rem;
+	    font-size: 1rem;
+		padding: 3rem 2rem;
+	    margin: 0;
+	}
 
 
 	.menu-holder {
@@ -566,25 +604,9 @@ button.close {
 	.sociallinks .link {
 	    margin: 0 1em 0 1em;
 	}
-	.banner-text {
-		font-size: 2.5rem;
-	    line-height: 2rem;
-	    padding: 0;
-	}
-
-	.banner-number {
-		font-size: 2rem;
-	}
-
-	.banner-sub {
-	    line-height: 1.2rem;
-	    font-size: 1rem;
-	    padding: 0;
-	}
 	.location-title {
 	    font-size: 6.5rem;
 	}
-
 }
 
 /*// Large devices (desktops, 992px and up)*/
@@ -598,6 +620,13 @@ button.close {
 	.splash-subtext {
 		padding: 0rem 0.2rem;
 	}
+	.banner-text {
+		max-width: 300px;
+	}
+	.banner-sub {
+	    padding: 2rem 2rem;
+	}
+
 
 	.menu-holder {
 		max-width: 95%;
@@ -629,8 +658,14 @@ button.close {
 	.splash-inner {
 		margin-right: 2rem;
 	}
+	.banner-text {
+		max-width: 350px;
+		font-size: 3rem;
+	}
+	.banner-sub {
+	    padding: 3rem 2rem;
+	}
 	.menu-holder {
 		max-width: 85%;
 	}
-	
 }
