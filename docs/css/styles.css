@@ -3,7 +3,7 @@ html {
 }
 
 .navbar-brand {
-	font-size:1.75rem;
+	font-size: 1.75rem;
 	z-index: 10;
 }
 
@@ -67,87 +67,23 @@ button:focus {
   display: block;
 }
 
-
-/*========================================================
-========================================================*/
-
-.order-button {
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	/*width:200px;*/
-	/*height: 50px;*/
-	width: 16rem;
-    height: 4rem;
-    margin-bottom: 4px;
-	opacity: 0.9;
-	transition: transform 0.2s;
-}
-
-.order-button:hover {
-	opacity: 1;
-	transform: scale(1.1);
-}
-
-.grubhub {
-	background-image: url('../images/grubhub.png');
-	/*background-image: url('../images/grubhub2.png');*/
-	transform: scale(1.05);
-}
-
-.slice {
-	background-image: url('../images/slice.png');
-}
-
-.thirdparty {
-	background-color: white;
-	color: green;
-	font-size: 1.25rem;
-	font-weight: 800;
-	line-height: 3rem;
-	border: 2px solid green;
-	transform: scale(0.97);
-}
-
-.thirdparty:hover {
-	color: green;
-	transform: scale(1.0) !important;
-}
-
-.services section {
-  text-align: center;
+.text-phone {
+	color: #ffc800 !important;
 }
 
 .vh-100 {
 	height: 100vh;
 }
-
-.bg-deepred {
-	background-color: #cc0014 !important;
-}
-
-.text-phone {
-	color: #ffc800 !important;
-}
-
+/*========================================================
+========================================================*/
 .splash {
 	background: url(../images/food7.webp);
 	background-repeat:no-repeat;
-	background-size: 100% 100%;
+    background-size: cover;
+    background-position: top;
 	background-attachment: fixed;
 	min-height: 500px;
 	color: white;
-}
-
-@media only screen and (max-width: 767px) {
-	.splash {
-	    background-size: cover;
-	    background-position: top;
-	}
-}
-
-.splash-text {
-	line-height: 5rem;
-	/*letter-spacing: -2px;*/
 }
 
 .dark-overlay {
@@ -159,30 +95,78 @@ button:focus {
 	background: rgba(0,0,0,0.4);
 }
 
+.splash-text {
+	line-height: 5rem;
+	font-size: 17vw;
+	font-weight: bold;
+}
+
+.splash-subtext {
+	font-size: 1.35rem;
+	font-weight: 300;
+	padding: 1rem 0.2rem;
+}
+
+.order-button {
+	display: block;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	max-width: 23rem;
+    height: 4rem;
+    margin-bottom: 0.5rem;
+	opacity: 0.9;
+	transition: transform 0.2s;
+}
+
+.thirdparty {
+	background-color: white;
+	color: green;
+	font-size: 2rem;
+	font-weight: 600;
+	border: 2px solid green;
+	transform: scale(0.97);
+}
+.thirdparty:hover {
+	color: green;
+	transform: scale(1.0) !important;
+}
+
+.grubhub {
+	background-image: url('../images/grubhub.png');
+	/*background-image: url('../images/grubhub2.png');*/
+	transform: scale(1.05);
+}
+.slice {
+	background-image: url('../images/slice.png');
+}
+
 /*========================================================
 ========================================================*/
+.banner {
+	background-color: #cc0014 !important;
+	padding: 2rem 0rem 3rem;
+}
 
 .banner-text {
 	color: white;
-	font-size: 3.5rem;
-    font-weight: 800;
+	font-size: 14vw;
+    font-weight: 600;
     text-transform: uppercase;
-    line-height: 3rem;
-}
-
-.banner-number {
-	font-size: 3.5rem;
+    line-height: 3.3rem;
 }
 
 .banner-sub {
 	color: white;
     line-height: 1.5rem;
     font-size: 1.2rem;
-    padding: 2rem 5rem;
+    padding: 2rem 3rem;
 }
 
+/*========================================================
+========================================================*/
 .event-block {
-    padding: 6rem 3.5rem;
+    padding: 3rem 1rem;
+    text-align: center;
 }
 
 .party-title {
@@ -197,30 +181,28 @@ button:focus {
 
 .party-content {
 	font-size: 14px;
-    padding: 1rem 1rem 0rem 0rem;
+    padding: 1rem;
     text-align: justify;
 }
 
 .partyimg {
-	position: relative;
-    left: 20px;
-    width: 100%;
+    width: 80%;
+    padding-bottom: 1rem;
 }
 
-
 .event-title {
-	color: white;
-	font-size: 4rem;
-	line-height: 4.5rem;
-	font-weight: 800;
+    color: white;
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    font-weight: 600;
 }
 
 .event-content {
-	font-size: 15px;
 	color: #aaa;
-	margin: 4rem 2rem;
+	margin: 3rem 3rem;
+	font-size: 14px;
+	text-align: justify;
 }
-
 
 #caterModal .carousel-control-prev-icon {
 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
@@ -236,7 +218,6 @@ button:focus {
 
 /*========================================================
 ========================================================*/
-
 .menu-section {
     background-color: #ce7513;
     background-image: url(https://images.unsplash.com/photo-1495195134817-aeb325a55b65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
@@ -248,11 +229,11 @@ button:focus {
 }
 
 .menu-holder {
-	max-width: 85%;
+	max-width: 90%;
 }
 
 .menu-section .card {
-	box-shadow: 1px 10px 20px #000;
+	box-shadow: 1px 5px 15px #000;
 	opacity: 0.9;
 }
 
@@ -281,12 +262,12 @@ button:focus {
 .specials {
 	width: 90%;
     padding-top: 1rem;
-    padding-bottom: 10rem;
+    padding-bottom: 6rem;
 }
 
 .specials-title {
 	color: antiquewhite;
-	font-size: 3rem;
+	font-size: 3.5rem;
     letter-spacing: 2px;
 }
 
@@ -320,14 +301,8 @@ button:focus {
     padding: 0rem 0.5rem;
 }
 
-
 /*========================================================
 ========================================================*/
-.location-title {
-	font-size: 5rem;
-	line-height: 4.5rem;
-}
-
 .mapback {
 	background-image: url('../images/map1edit2.jpg');
 	background-size: cover;
@@ -336,43 +311,76 @@ button:focus {
 	background-blend-mode: hard-light;
 }
 
-.mapback iframe {
-	opacity: 0.7;
+.location-title {
+	color: white;
+	font-size: 18vw;
+	line-height: 5rem;
+	padding: 2rem 0rem;
 }
 
-.mapback iframe:hover {
-	opacity: 1;
+.mapback iframe {
+	height: 400px;
+	margin: 2rem 0rem;
 }
 
 .details {
 	font-size: 18px;
 	text-align: center;
+	padding-top: 1rem;
 }
 
+.details hr {
+    background-color: #fff;
+    border-radius: 3px;
+    height: 1px;
+    margin: 1rem 0 2.5rem;
+}
 
+.details .subtitle {
+	display: block;
+	font-size: 7vw;
+	padding-bottom: 2rem;
+}
+
+.primary-detail {
+	text-align: left;
+	margin-bottom: 2vw;
+	font-size: 1.5rem;
+}
+
+.secondary-detail {
+	text-align: left;
+	margin-bottom: 1rem;
+	font-size: 1.2rem;
+	font-weight: 300;
+}
+
+/*.mapback iframe {
+	opacity: 0.7;
+}
+.mapback iframe:hover {
+	opacity: 1;
+}*/
 
 /*========================================================
 ========================================================*/
-
 .footer {
 	background: #794e0052;
-	margin-top: 3.5rem;
+	margin-top: 1rem;
+	padding: 1.2rem 0 0.5rem;
 }
 
 .sociallinks {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     padding: 0px;
-    padding-bottom: 1rem;
+    padding-bottom: 0.8rem;
 }
 
 .sociallinks .link {
-    color: #fff;
-    font-size: 2em;
-    font-weight: lighter;
-    margin: 0 0.5em 0 0.5em;
+    font-size: 2.3em;
     transition: all 200ms;
 }
 
@@ -380,6 +388,27 @@ button:focus {
     transform: scale(1.15);
 }
 
+.link.facebook {
+    color: #3b5998;
+}
+
+.link.youtube {
+    color: #B71D1C;
+}
+
+.link.twitter {
+    color: #1DA1F3;
+}
+
+.link.instagram {
+    color: #E1306C;
+}
+
+.link.vimeo {
+    color: #86c9ef;
+}
+
+/*
 .link:hover.facebook {
     color: #3b5998;
 }
@@ -399,20 +428,13 @@ button:focus {
 .link:hover.vimeo {
     color: #86c9ef;
 }
-
-hr {
-    background-color: #fff;
-    border-radius: 3px;
-    height: 1px;
-    margin: 1em 0 2em 0;
-}
+*/
 
 .copyright {
 	display: flex;
     justify-content: space-around;
 	color: white;
 }
-
 
 /*========================================================
 ========================================================*/
@@ -456,17 +478,30 @@ button.close {
 	opacity: 0.8 !important;
 }
 
+/*========================================================
+========================================================*/
 
-
-
-
-
+/*// X-Small devices (Galaxy S8 phones, 360px and up)*/
+@media (min-width: 360px) {
+	.splash-inner {
+		max-width: 320px;
+    	margin: 0 auto;
+	}
+	.splash-text {
+		font-size: 5rem;
+	}
+}
 
 /*// Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
 	html {
-		font-size: 12px;
+		font-size: 16px;
 	}
+	.splash-inner {
+		max-width: 400px;
+	}
+
+
 	.menu-holder {
 		max-width: 80%;
 	}
@@ -502,6 +537,23 @@ button.close {
 	html {
 		font-size: 14px;
 	}
+	.splash {
+		background-size: 120% 100%;
+    	background-position: right;
+	}
+	.splash-inner {
+		max-width: 360px;
+		margin: 0;
+	}
+	.order-button {
+		opacity: 0.9;
+	}
+	.order-button:hover {
+		opacity: 1;
+		transform: scale(1.1);
+	}
+
+
 	.menu-holder {
 		max-width: 70%;
 	}
@@ -540,10 +592,16 @@ button.close {
 	html {
 		font-size: 16px;
 	}
+	.splash-inner {
+		max-width: 400px;
+	}
+	.splash-subtext {
+		padding: 0rem 0.2rem;
+	}
+
 	.menu-holder {
 		max-width: 95%;
 	}
-
 	.event-block {
 		min-height: 550px;
 		padding: 0rem;
@@ -568,6 +626,9 @@ button.close {
 
 /*// Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
+	.splash-inner {
+		margin-right: 2rem;
+	}
 	.menu-holder {
 		max-width: 85%;
 	}
