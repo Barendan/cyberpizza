@@ -199,6 +199,7 @@ button:focus {
     font-size: 4.5rem;
     line-height: 4.5rem;
     font-weight: 600;
+    padding: 0rem 1rem;
 }
 
 .event-content {
@@ -504,6 +505,27 @@ button.close {
 	    margin: 0 auto;
 	    display: block;
 	}
+	.party-content {
+		max-width: 370px;
+    	margin: 0 auto;
+	}
+	.party-title {
+		font-size: 3rem;
+	}
+	.partyimg {
+		max-width: 320px;
+	}
+	.event-title {
+		font-size: 5.5rem;
+		padding: 0rem 2rem;
+		max-width: 400px;
+    	margin: 0 auto;
+	}
+	.event-content {
+	    max-width: 400px;
+	    padding: 0rem 3rem;
+	    margin: 3rem auto;
+	}
 }
 
 /*// Small devices (landscape phones, 576px and up)*/
@@ -520,6 +542,30 @@ button.close {
 	.vip-text {
 		max-width: 450px;
 	}
+	.event-block {
+		padding: 3rem 3rem;
+	}
+	.party-content {
+		max-width: 460px;
+	    padding: 1rem 0rem;
+    	font-size: 16px;
+	}
+	.partyimg {
+    	max-width: 360px;
+	}
+	.event-inner {
+		max-width: 520px;
+		margin: 0 auto;
+	}
+	.event-title {
+		max-width: initial;
+		font-size: 5rem;
+	}
+	.event-content {
+		max-width: initial;
+		margin: 3rem auto;
+		font-size: 16px;
+	}
 
 
 	.menu-holder {
@@ -527,20 +573,6 @@ button.close {
 	}
 	.menupic {
 		height: 500px;
-	}
-	.event-block {
-		padding: 3rem 3rem;
-		display: flex!important;
-		align-items: center!important;
-	}
-	.event-title {
-		font-size: 5.5rem;
-	}
-	.event-content {
-		margin: 2rem 5rem;
-	}
-	.party-content {
-		padding: 1rem 2rem 0rem 0rem;
 	}
 	.specials {
 		width: 80%;
@@ -590,6 +622,37 @@ button.close {
 		padding: 3rem 2rem;
 	    margin: 0;
 	}
+	.event-block {
+		padding: 4rem 5rem;
+		display: flex!important;
+		align-items: center!important;
+	}
+	.party-title {
+    	font-size: 2.5rem;
+	}
+	.party-content {
+	    margin: 1rem auto;
+	    font-size: 14px;
+	    max-width: 360px;
+	}
+	.partyimg {
+	    width: 100%;
+	    margin-left: 2rem;
+	}
+	.event-inner {
+	    max-width: 580px;
+	    margin: 0 auto;
+	}
+	.event-title {
+	    font-size: 6rem;
+	    line-height: 6rem;
+	}
+	.event-content {
+	    max-width: 550px;
+	    margin: 3rem auto 4rem;
+	    font-size: 18px;
+	    line-height: 36px;
+	}
 
 
 	.menu-holder {
@@ -597,9 +660,6 @@ button.close {
 	}
 	.modal-dialog {
 		max-width: 65vw;
-	}
-	.event-block {
-		padding: 5rem 7rem;
 	}
 	.sociallinks .link {
 	    margin: 0 1em 0 1em;
@@ -626,14 +686,39 @@ button.close {
 	.banner-sub {
 	    padding: 2rem 2rem;
 	}
-
+	.event-block {
+		min-height: 480px;
+		padding: 0rem 1rem;
+	}
+	.party-title {
+	    font-size: 1.6rem;
+	    font-weight: 600;
+	    line-height: 2.5rem;
+	    padding: 0.5rem 1.5rem;
+	}
+	.party-content {
+		margin: 0rem auto;
+		max-width: 220px;
+	}
+	.partyimg {
+		position:relative;
+	    left: -20px;
+	}
+	.event-inner {
+	    padding: 2rem 0rem;
+	}
+	.event-title {
+    	font-size: 4rem;
+    	line-height: 4rem;
+	}
+	.event-content {
+		margin: 2rem auto 3rem;
+	    font-size: 16px;
+	    line-height: 24px;
+	}
 
 	.menu-holder {
 		max-width: 95%;
-	}
-	.event-block {
-		min-height: 550px;
-		padding: 0rem;
 	}
 	.menu-section {
 		background-size: 100% 100%;
@@ -641,12 +726,6 @@ button.close {
 	}
 	.mapback {
 		background-size: 100% 100%;
-	}
-	.partyimg {
-	    left: -20px;
-	}
-	.banner-number {
-		font-size: 2.5rem;
 	}
 	.footer {
 		margin-top: 1.5rem;
@@ -665,6 +744,24 @@ button.close {
 	.banner-sub {
 	    padding: 3rem 2rem;
 	}
+	.event-block {
+	    padding: 0rem 2rem;
+	}
+	.party-title {
+		font-size: 1.8rem;
+		font-weight: 800;
+		line-height: initial;
+	}
+	.party-content {
+	    margin: 0rem auto;
+	    font-size: 14px;
+	    max-width: 360px;
+	    text-align: center;
+	}
+
+
+
+
 	.menu-holder {
 		max-width: 85%;
 	}
