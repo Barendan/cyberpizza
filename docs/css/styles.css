@@ -2,6 +2,10 @@ html {
 	font-size: 12px;
 }
 
+.noflow {
+	overflow:hidden;
+}
+
 .open {
 	position: fixed;
 	top: 10px;
