@@ -246,7 +246,8 @@ button:focus {
 
 .menu-title {
 	color: antiquewhite;
-	font-size: 7rem;
+	font-size: 18vw;
+    line-height: 16vw;
 	font-weight: 800;
 	letter-spacing: 4px;
 	padding-top: 2rem;
@@ -318,7 +319,7 @@ button:focus {
 .location-title {
 	color: white;
 	font-size: 18vw;
-	line-height: 5rem;
+	line-height: 16vw;
 	padding: 2rem 0rem;
 }
 
@@ -348,7 +349,6 @@ button:focus {
 
 .primary-detail {
 	text-align: left;
-	margin-bottom: 2vw;
 	font-size: 1.5rem;
 }
 
@@ -359,19 +359,18 @@ button:focus {
 	font-weight: 300;
 }
 
-/*.mapback iframe {
-	opacity: 0.7;
-}
-.mapback iframe:hover {
-	opacity: 1;
-}*/
-
 /*========================================================
 ========================================================*/
 .footer {
 	background: #794e0052;
 	margin-top: 1rem;
 	padding: 1.2rem 0 0.5rem;
+}
+
+.footer-inner {
+	width: 100%;
+	max-width: 1050px;
+	margin: 0.5rem auto 0;
 }
 
 .sociallinks {
@@ -411,28 +410,6 @@ button:focus {
 .link.vimeo {
     color: #86c9ef;
 }
-
-/*
-.link:hover.facebook {
-    color: #3b5998;
-}
-
-.link:hover.youtube {
-    color: #B71D1C;
-}
-
-.link:hover.twitter {
-    color: #1DA1F3;
-}
-
-.link:hover.instagram {
-    color: #E1306C;
-}
-
-.link:hover.vimeo {
-    color: #86c9ef;
-}
-*/
 
 .copyright {
 	display: flex;
@@ -535,6 +512,18 @@ button.close {
 	    font-size: 1.4rem;
 	    padding: 0rem 2rem;
 	}
+	.details {
+		font-size: 2rem;
+	}
+	.primary-detail {
+		font-size: 1.7rem;
+	}
+	.secondary-detail {
+		font-size: 1.3rem;
+	}
+	.sociallinks .link {
+		font-size: 8vw;
+	}
 }
 
 /*// Small devices (landscape phones, 576px and up)*/
@@ -584,13 +573,30 @@ button.close {
 	.specials {
 		max-width: 440px;
 	}
-
-
-
+	.menu-title, .location-title {
+		font-size: 6rem;
+		line-height: 6rem;
+	}
+	.location-title {
+		max-width: 550px;
+		padding-left: 1rem;
+	}
 	.sociallinks {
     	padding-bottom: 0rem;
-		justify-content: normal;
-	}	
+	}
+	.sociallinks .link {
+		font-size: 2rem;
+	}
+	.footer {
+		padding: 1rem 0rem;
+	}
+	.footer-inner {
+		display: flex;
+	}
+	.copyright {
+		font-size: 0.8rem;
+		justify-content: center;
+	}
 }
 
 /*// Medium devices (tablets, 768px and up)*/
@@ -675,14 +681,42 @@ button.close {
 	.specials {
 		max-width: 680px;
 	}
-	.modal-dialog {
-		max-width: 65vw;
-	}
-	.sociallinks .link {
-	    margin: 0 1em 0 1em;
+	.menu-title, .location-title {
+		font-size: 8rem;
+		line-height: 7rem;
 	}
 	.location-title {
-	    font-size: 6.5rem;
+	    font-size: 8rem;
+	    text-align: center;
+		padding-left: 0;
+		margin: 0 auto;
+	}
+	.details .subtitle {
+		font-size: 3.5rem;
+	}
+	.primary-detail, .secondary-detail {
+		text-align: center;
+	}
+	.sociallinks .link {
+		color: white;
+	}
+	.link:hover.facebook {
+	    color: #3b5998;
+	}
+	.link:hover.youtube {
+	    color: #B71D1C;
+	}
+	.link:hover.twitter {
+	    color: #1DA1F3;
+	}
+	.link:hover.instagram {
+	    color: #E1306C;
+	}
+	.link:hover.vimeo {
+	    color: #86c9ef;
+	}
+	.modal-dialog {
+		max-width: 65vw;
 	}
 }
 
@@ -752,11 +786,52 @@ button.close {
 	.special-box {
 	    padding: 1.5rem 1rem 1.5rem 1.3rem;
 	}
-	.mapback {
-		background-size: 100% 100%;
+	.location-title {
+		font-size: 7rem;
+	}
+	.mapback iframe {
+		opacity: 0.7;
+	}
+	.mapback iframe:hover {
+		opacity: 1;
+	}
+	.location-inner {
+		padding-top: 1rem;
+		padding-bottom: 5rem;
+	    max-width: 960px;
+	    margin: 0 auto !important;
+	}
+	.address {
+		display: block;
+		font-size: 1.3rem;
+		letter-spacing: 2px;
+		padding-bottom: 1rem;
+	}
+	.details hr {
+    	margin: 1rem 0;
+	}
+	.details {
+		font-size: 1.5rem;
+		padding-top: 2rem;
+	}
+	.details .subtitle {
+	    font-size: 2.2rem;
+	    padding-bottom: 1rem;
+	}
+	.primary-detail {
+		font-size: 1.55rem;
+	}
+	.secondary-detail {
+		font-size: 1.15rem;
 	}
 	.footer {
 		margin-top: 1.5rem;
+	}
+	.copyright {
+		font-size: 1rem;
+	    justify-content: start;
+	    display: block;
+	    padding-left: 2rem !important;
 	}
 }
 
@@ -802,5 +877,11 @@ button.close {
 	}
 	.special-box {
 		padding: 2rem 1rem
+	}
+	.mapback {
+		background-size: 100% 100%;
+	}
+	.footer-inner {
+	    max-width: 1100px;
 	}
 }
