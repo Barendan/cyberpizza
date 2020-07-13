@@ -13,37 +13,28 @@
 
 <div class="noflow container-fluid p-0">
 
-	<nav class="navbar navbar-expand-md fixed-top navbar-dark mb-3" id="main-nav">
-		<div class="container-fluid">
-
-			<a class="navbar-brand" href="file:///C:/Users/Trigger/Desktop/CPC/index.html">
-				Cyber Pizza Cafe
-			</a>
-			<button class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarNav">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-					  <a class="nav-link" href="#home">Home</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#catering">Catering</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#menu">Menu</a>
-					</li>        
-					<li class="nav-item">
-					  <a class="nav-link" href="#location">Location</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link font-weight-bold text-phone" href="#location">954 417 6227</a>
-					</li>
-				</ul>
-			</div>
-
-		</div>
+	<nav class="open" id="main-nav">
+		<span class="cls"></span>
+		<span>
+			<ul class="sub-menu">
+				<li class="active">
+				  <a href="#home">Home</a>
+				</li>
+				<li class="">
+				  <a href="#catering">Catering</a>
+				</li>
+				<li class="">
+				  <a href="#menu">Menu</a>
+				</li>        
+				<li class="">
+				  <a href="#location">Location</a>
+				</li>
+				<li class="">
+				  <b class="text-phone">954 417 6227</b>
+				</li>
+			</ul>
+		</span>
+		<span class="cls"></span>
 	</nav>
 
 	<div class="jumbotron-fluid vh-100 splash" id="home">
@@ -259,9 +250,8 @@
 		    	</p>
 			</div>
 	    </div>
-
 	</div>
-
+	
 </div>
 
 
@@ -341,23 +331,73 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
 <script>
-	$('.carousel').carousel({
-		interval: 100000,
-		keyboard: true,
-		pause: 'hover',
-		wrap: true
+	$(document).ready(function() {
+		$(document).delegate('.open', 'click', function(event){
+			$(this).addClass('oppenned');
+			event.stopPropagation();
+		})
+		$(document).delegate('body', 'click', function(event) {
+			$('.open').removeClass('oppenned');
+		})
+		$(document).delegate('.oppenned', 'click', function(event){
+			$('.open').removeClass('oppenned');
+			event.stopPropagation();
+		});
 	});
 
-  	$('body').scrollspy({target: '#main-nav'});
+	// Cache selectors
+	let lastId,
+	    topMenu = $(".sub-menu"),
+	    topMenuHeight = topMenu.outerHeight()+15,
+	    // All list items
+	    menuItems = topMenu.find("a"),
+	    // Anchors corresponding to menu items
+	    scrollItems = menuItems.map(function(){
+	      let item = $($(this).attr("href"));
+	      if (item.length) { return item; }
+	    });
 
-  	$('.navbar-nav a').click(function(e) {
-		e.preventDefault();
-		let anchor = $(this).text().toLowerCase();
-
-		$('html, body').animate({
-		    scrollTop: $('#' + anchor).offset().top
-		}, 500);
+	// Bind click handler to menu items
+	// so we can get a fancy scroll animation
+	menuItems.click(function(e){
+	  let href = $(this).attr("href"),
+	      offsetTop = href === "#" ? 0 : $(href).offset().top;
+	  $('html, body').stop().animate({ 
+	      scrollTop: offsetTop
+	  }, 500);
+	  e.preventDefault();
 	});
+
+	// Bind to scroll
+	$(window).scroll(function(){
+	   // Get container scroll position
+	   let fromTop = $(this).scrollTop()+topMenuHeight;
+	   
+	   // Get id of current scroll item
+	   let cur = scrollItems.map(function(){
+	     if ($(this).offset().top < fromTop)
+	       return this;
+	   });
+	   // Get the id of the current element
+	   cur = cur[cur.length-1];
+	   let id = cur && cur.length ? cur[0].id : "";
+	   
+	   if (lastId !== id) {
+	       lastId = id;
+	       // Set/remove active class
+	       menuItems
+	         .parent().removeClass("active")
+	         .end().filter("[href='#"+id+"']").parent().addClass("active");
+	   }                   
+	});
+
+	// $('.carousel').carousel({
+	// 	interval: 100000,
+	// 	keyboard: true,
+	// 	pause: 'hover',
+	// 	wrap: true
+	// });
+
 </script>
 
 </body>

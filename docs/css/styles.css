@@ -2,73 +2,152 @@ html {
 	font-size: 12px;
 }
 
-.navbar-brand {
-	font-size: 1.75rem;
-	z-index: 10;
+.open {
+	position: fixed;
+	top: 10px;
+	right: 20px;
+	width: 50px;
+	height: 50px;
+	display: block;
+	cursor: pointer;
+	-webkit-transition: opacity 0.2s linear;
+	transition: opacity 0.2s linear;
+	z-index: 1000;
+}
+.open:hover {
+	opacity: 0.8;
 }
 
-.navbar {
-	font-size:1.4rem;
-}
-
-.navbar-nav {
-	align-items: center;
-}
-
-.navbar-collapse.collapse.show {
-	background-color: #000000d9;
+.open span {
+	display: block;
+	float: left;
+	clear: both;
+	height: 4px;
+	width: 40px;
+	border-radius: 40px;
+	background-color: #fff;
 	position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    padding-top: 3rem;
-    z-index: 2;
-}
-
-.navbar-collapse.collapse.show .nav-link {
-	font-size: 2.5rem;
-}
-
-.noflow {
+	right: 3px;
+	top: 3px;
 	overflow: hidden;
+	-webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+.open span:nth-child(1) {
+	margin-top: 10px;
+	z-index: 9;
+}
+.open span:nth-child(2) {
+	margin-top: 25px;
+}
+.open span:nth-child(3) {
+	margin-top: 40px;
 }
 
-.navbar-toggler {
-    z-index: 10;
+.sub-menu {
+	background-color: rgba(105, 96, 32, 0.59);
+	position: absolute;
+	height: 0;
+	width: 0;
+	right: 0;
+	top: 0;
+	border-radius: 50%;
+	transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	-webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	overflow: hidden;
+	z-index: 18;
 }
 
-.navbar-toggler.collapsed .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+.sub-menu li {
+	display: block;
+	float: right;
+	clear: both;
+	height: auto;
+	margin-right: -160px;
+	-webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.sub-menu li:first-child {
+	margin-top: 190px;
+}
+.sub-menu li:nth-child(1) {
+	-webkit-transition-delay: 0.05s;
+}
+.sub-menu li:nth-child(2) {
+	-webkit-transition-delay: 0.10s;
+}
+.sub-menu li:nth-child(3) {
+	-webkit-transition-delay: 0.15s;
+}
+.sub-menu li:nth-child(4) {
+	-webkit-transition-delay: 0.20s;
+}
+.sub-menu li:nth-child(5) {
+	-webkit-transition-delay: 0.25s;
 }
 
-.navbar-dark .navbar-toggler-icon,
-.navbar-toggler.collapsed .navbar-toggler-icon:hover {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+.sub-menu li a {
+	float: left;
+	display: block;
+	color: #fff;
+	width: 100%;
+	line-height: 40px;
+	font-size: 18px;
+	font-family: 'Lato', Arial, Helvetica, sans-serif;
 }
 
-.navbar-dark .navbar-toggler.collapsed {
-    color: rgba(255,255,255,0.5) !important;
-    border-color: rgba(255,255,255,0.5);
+.oppenned .sub-menu {
+	opacity: 1;
+	height: 410px;
+	width: 405px;
 }
 
-.navbar-dark .navbar-toggler,
-.navbar-dark .navbar-toggler:hover {
-    color: rgba(255,255,255,1.0) !important;
-    border-color: rgba(255,255,255,1.0);
+.oppenned span:nth-child(2) {
+	overflow: visible;
 }
 
-button:focus {
-	outline: 0;
+.oppenned span:nth-child(1), .oppenned span:nth-child(3) {
+	z-index: 100;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.oppenned span:nth-child(1) {
+	-webkit-transform: rotate(45deg) translateY(12px) translateX(12px);
+	transform: rotate(45deg) translateY(12px) translateX(12px);
+}
+
+.oppenned span:nth-child(2) {
+	background-color: rgba(255, 0, 212, 0.61);
+	top: -160px;
+	right: -160px;
+	width: 400px;
+	height: 400px;
+	border-radius: 50%;
+}
+
+.oppenned span:nth-child(3) {
+  	-webkit-transform: rotate(-45deg) translateY(-10px) translateX(10px);
+    transform: rotate(-45deg) translateY(-10px) translateX(10px);
+}
+
+.oppenned li {
+	margin-right: 168px;
 }
 
 .icon {
-  max-width: 150px;
-  margin: 0 auto;
-  display: block;
+	max-width: 150px;
+	margin: 0 auto;
+	display: block;
 }
 
 .text-phone {
-	color: #ffc800 !important;
+    display: block;
+    line-height: 40px;
+    font-size: 1.5rem;
+    color: #ffc800 !important;
+    font-weight: bold;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
 }
 
 .vh-100 {
@@ -171,6 +250,10 @@ button:focus {
 .event-block {
     padding: 3rem 1rem;
     text-align: center;
+}
+
+.event-block:nth-of-type(1) {
+	background: url('https://s3.amazonaws.com/mk-website-media/wp-content/uploads/2018/10/18230852/Wallpaper-MuffinMani_Confetti_1.jpg');
 }
 
 .party-title {
@@ -604,6 +687,71 @@ button.close {
 	html {
 		font-size: 14px;
 	}
+	.open span:nth-child(1) {
+    	display: none;
+	}
+	.open span:nth-child(2) {
+		background: transparent;
+    	position:fixed;
+	    top: 0;
+	    right: 0;
+	    left: 0;
+    	width: 100%;
+	    height: inherit;
+    	padding: .5rem 1rem;
+	    margin-top: initial;
+    	border-radius: inherit;
+		overflow: visible;
+	}
+	.open span:nth-child(3) {
+    	display: none;
+	}
+	.open:hover {
+		opacity: 1.0;
+	}
+	.oppenned .sub-menu {
+	    height: inherit;
+	    width: inherit;
+	}
+	.sub-menu {
+		position: relative;
+		background: inherit;
+		width: 100%;
+		height: inherit;
+		padding: 0 15px;
+		margin: 0 auto;
+		
+	    display: -ms-flexbox;
+	    display: flex;
+	    -ms-flex-align: center;
+	    align-items: center;
+	    -ms-flex-flow: row nowrap;
+	    flex-flow: row nowrap;
+	    -ms-flex-pack: end;
+	    justify-content: flex-end;
+	}
+	.sub-menu li {
+		padding: .5rem;
+		margin-right: initial;
+	}
+	.sub-menu li:first-child {
+	     margin-top: initial; 
+	}
+	.sub-menu li a {
+	    display: block;
+	    color: rgba(255,255,255,.5);
+	    line-height: 40px;
+	    font-size: 1.5rem;
+	    text-decoration: none;
+	}
+	.sub-menu li a:hover {
+		color: rgba(255,255,255,.75);
+	}
+	.sub-menu li.active a {
+		color: #fff;
+		border-bottom: 3px solid #fff;
+	}
+
 	.splash {
 		background-size: 120% 100%;
     	background-position: right;
