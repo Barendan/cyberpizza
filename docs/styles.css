@@ -157,10 +157,17 @@ html {
 .vh-100 {
 	height: 100vh;
 }
+
+.brand {
+	display: none;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    font-size: 1.25rem;
+}
 /*========================================================
 ========================================================*/
 .splash {
-	background: url(../images/food7.webp);
+	background: url(images/food7.webp);
 	background-repeat:no-repeat;
     background-size: cover;
     background-position: top;
@@ -215,12 +222,12 @@ html {
 }
 
 .grubhub {
-	background-image: url('../images/grubhub.png');
-	/*background-image: url('../images/grubhub2.png');*/
+	background-image: url('images/grubhub.png');
+	/*background-image: url('images/grubhub2.png');*/
 	transform: scale(1.05);
 }
 .slice {
-	background-image: url('../images/slice.png');
+	background-image: url('images/slice.png');
 }
 
 /*========================================================
@@ -396,7 +403,7 @@ html {
 /*========================================================
 ========================================================*/
 .mapback {
-	background-image: url('../images/map1edit2.jpg');
+	background-image: url('images/map1edit2.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-color: #503a01;
@@ -691,6 +698,9 @@ button.close {
 	html {
 		font-size: 14px;
 	}
+	.open {
+		cursor: default;
+	}
 	.open span:nth-child(1) {
     	display: none;
 	}
@@ -701,7 +711,7 @@ button.close {
 	    right: 0;
 	    left: 0;
     	width: 100%;
-	    height: inherit;
+	    height: auto;
     	padding: .5rem 1rem;
 	    margin-top: initial;
     	border-radius: inherit;
@@ -717,16 +727,19 @@ button.close {
 	    height: inherit;
 	    width: inherit;
 	}
+	.brand {
+		display: inline-block;
+		color: white;
+		width: 25%;
+	}
 	.sub-menu {
-		position: relative;
 		background: inherit;
-		width: 100%;
+		width: 80%;
 		height: inherit;
 		padding: 0 15px;
-		margin: 0 auto;
 		
-	    display: -ms-flexbox;
-	    display: flex;
+	    display: -ms-inline-flexbox;
+	    display: inline-flex;
 	    -ms-flex-align: center;
 	    align-items: center;
 	    -ms-flex-flow: row nowrap;
